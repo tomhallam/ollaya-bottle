@@ -1,0 +1,19 @@
+[app]
+name = "ollaya"
+version = "0.1.0"
+description = "Local decision models with a TypeSafe-compatible API"
+
+[runtime.container]
+image = "Dockerfile"
+port = 11435
+
+[routing]
+health_check = "/"
+
+[resources]
+memory_mb = 4096
+cpu_cores = 2
+
+[data]
+app_data = false
+app_archive = true
